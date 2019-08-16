@@ -1,0 +1,64 @@
+{
+  "name": "@pascaliske/npm-package",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Pascal Iske",
+    "email": "info@pascal-iske.de",
+    "url": "https://pascal-iske.de"
+  },
+  "repository": {
+    "url": "https://github.com/pascaliske/npm-package.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/pascaliske/npm-package/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts",
+    "watch": "rollup --config rollup.config.ts --watch",
+    "docs": "typedoc --mode modules --out docs --excludeNotExported --excludeExternals src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest --config jest.config.json --coverage && codecov",
+    "check": "snyk test",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "changelog": "standard-changelog"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tslib": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@pascaliske/eslint-config": "latest",
+    "@pascaliske/tsconfig": "latest",
+    "@types/jest": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/eslint-plugin-tslint": "latest",
+    "@typescript-eslint/parser": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "expect": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "rollup": "latest",
+    "rollup-plugin-clear": "latest",
+    "rollup-plugin-terser": "latest",
+    "rollup-plugin-typescript2": "latest",
+    "snyk": "latest",
+    "standard-changelog": "latest",
+    "ts-jest": "latest",
+    "typedoc": "latest",
+    "typescript": "latest"
+  }
+}
