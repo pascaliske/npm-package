@@ -27,6 +27,7 @@
     "test": "jest --config jest.config.json --coverage && codecov",
     "check": "snyk test",
     "format": "prettier --write \"src/**/*.ts\"",
+    "version": "bump --yes package.json",
     "changelog": "standard-changelog"
   },
   "publishConfig": {
@@ -46,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/eslint-plugin-tslint": "latest",
     "@typescript-eslint/parser": "latest",
+    "bump-cli": "latest",
     "codecov": "latest",
     "eslint": "latest",
     "expect": "latest",
