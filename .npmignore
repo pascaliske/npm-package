@@ -7,7 +7,6 @@ coverage
 .editorconfig
 .huskyrc
 .lintstagedrc
-.prettierrc
 .snyk
 .travis.yml
 *.config.*

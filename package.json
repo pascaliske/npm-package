@@ -32,6 +32,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "prettier": "@pascaliske/prettier-config",
   "dependencies": {
     "tslib": "latest"
   },
@@ -39,6 +40,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@pascaliske/eslint-config": "latest",
+    "@pascaliske/prettier-config": "latest",
     "@pascaliske/tsconfig": "latest",
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
