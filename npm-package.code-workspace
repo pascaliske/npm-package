@@ -8,6 +8,7 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "editor.formatOnPaste": true,
+        "prettier.ignorePath": ".prettierignore",
         "typescript.tsdk": "node_modules/typescript/lib",
         "[yaml]": {
             "editor.formatOnSave": false,
