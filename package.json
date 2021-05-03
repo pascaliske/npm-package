@@ -57,7 +57,6 @@
     "rollup-plugin-clear": "latest",
     "rollup-plugin-terser": "latest",
     "rollup-plugin-typescript2": "latest",
-    "snyk": "latest",
     "standard-changelog": "latest",
     "ts-jest": "latest",
     "typedoc": "latest",
