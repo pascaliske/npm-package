@@ -10,20 +10,21 @@
         "editor.formatOnPaste": true,
         "prettier.ignorePath": ".prettierignore",
         "typescript.tsdk": "node_modules/typescript/lib",
+        "[html]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnType": true
+        },
         "[yaml]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false,
-            "editor.formatOnPaste": false
+            "editor.formatOnSave": true,
+            "editor.formatOnType": true
         },
         "[json]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false,
-            "editor.formatOnPaste": false
+            "editor.formatOnSave": true,
+            "editor.formatOnType": true
         },
         "[jsonc]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false,
-            "editor.formatOnPaste": false
+            "editor.formatOnSave": true,
+            "editor.formatOnType": true
         }
     }
 }
