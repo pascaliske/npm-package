@@ -14,12 +14,14 @@ jobs:
       # prepare
       - uses: actions/setup-node@v2
         with:
-          node-version: '15'
+          node-version: '16'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install --frozen-lockfile
 
       # build
       - run: yarn run build
+
+      # test
       - run: yarn run lint
       - run: yarn run test
 
