@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: replace-repository-name
+      - task: enable-dependabot
+      - task: remove-setup-workflow
+
+  # replace repository name references
+  replace-repository-name:
+    cmds:
+      - sed -i 's|npm-package|{{.REPOSITORY_NAME}}|g' README.md package.json
+      - mv {npm-package,{{.REPOSITORY_NAME}}}.code-workspace
+
+  # enable dependabot
+  enable-dependabot:
+    cmds:
+      - mv .github/dependabot.yml{.disabled,}
+
+  # remove setup workflow
+  remove-setup-workflow:
+    cmds:
+      - rm .github/workflows/setup.yml

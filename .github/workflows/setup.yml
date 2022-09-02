@@ -1,0 +1,40 @@
+name: Setup
+on: [push]
+
+permissions: write-all
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+      # build names
+      - name: Build names
+        id: names
+        run: |
+          echo "::set-output name=repository::${REPOSITORY//$OWNER\//}"
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPOSITORY: ${{ github.repository }}
+
+      # checkout
+      - uses: actions/checkout@v3
+
+      # setup taskfile
+      - uses: arduino/setup-task@v1
+
+      # prepare files
+      - name: Setup repository
+        run: task setup
+        env:
+          REPOSITORY_NAME: ${{ steps.names.outputs.repository }}
+
+      # commit changes
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          branch: feature/initialize
+          title: 'chore: initialize repository'
+          commit-message: 'chore: initialize repository from template'
+          assignees: ${{ github.actor }}
+          delete-branch: true
+          signoff: true
