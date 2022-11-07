@@ -12,7 +12,7 @@ jobs:
       - name: Build names
         id: names
         run: |
-          echo "::set-output name=repository::${REPOSITORY//$OWNER\//}"
+          echo "repository=${REPOSITORY//$OWNER\//}" >> $GITHUB_OUTPUT
         env:
           OWNER: ${{ github.repository_owner }}
           REPOSITORY: ${{ github.repository }}
