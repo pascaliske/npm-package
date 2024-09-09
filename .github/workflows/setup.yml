@@ -30,7 +30,7 @@ jobs:
           REPOSITORY_NAME: ${{ steps.names.outputs.repository }}
 
       # commit changes
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@v7
         with:
           branch: feature/initialize
           title: 'chore: initialize repository'
